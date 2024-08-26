@@ -1,0 +1,44 @@
+<div class="form-container">
+  <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input
+          required
+          type="text"
+          name="username"
+          [ngModel]=""
+          class="username"
+        />
+      </div>
+    </div>
+    <br />
+
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input
+          class="password"
+          type="password"
+          name="password"
+          [ngModel]=""
+          required
+        />
+      </div>
+    </div>
+
+    <div class="field columns is-grouped is-centered">
+      <div class="control">
+        <button class="button is-success" [disabled]="!loginForm.valid">
+          Login
+        </button>
+      </div>
+      <p>or</p>
+      <div class="control">
+        <button class="button is-secondary" [routerLink]="['/registration']">
+          Sign up
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

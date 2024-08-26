@@ -1,0 +1,23 @@
+h1 {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: #8a4d76;
+  font-weight: bold;
+}
+
+@import "../../main-styles.scss";
+
+.layout-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  overflow: hidden;
+
+  .page-content {
+    flex-grow: 1;
+    overflow-y: scroll;
+  }
+}
